@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Introducción a Strapi V4",
+    "content": "# Bienvenido a Strapi V4\n\nStrapi V4 es la nueva versión del popular CMS headless que ofrece mejoras significativas en performance, estabilidad y facilidad de uso.\n\n## Características principales\n\n- **Mejor performance**: Optimizaciones en el core\n- **Nueva arquitectura**: Más modular y extensible\n- **Injection Zone**: Nueva forma de customizar el admin panel\n\n¡Explora todas las posibilidades que ofrece!",
+    "excerpt": "Descubre las nuevas características y mejoras de Strapi V4, incluyendo Injection Zone para customización del admin panel.",
+    "slug": "introduccion-strapi-v4",
+    "author": "Equipo Strapi",
+    "status": "published",
+    "views": 150,
+    "meta_description": "Guía completa de introducción a Strapi V4 con sus nuevas características y mejoras de performance.",
+    "tags": ["strapi", "cms", "headless", "v4"],
+    "publishedAt": "2024-01-15T10:00:00.000Z"
+  },
+  {
+    "title": "Customización con Injection Zone",
+    "content": "# Injection Zone: La Nueva Forma de Customizar\n\nInjection Zone es la metodología recomendada para personalizar el Panel de Administración de Strapi V4.\n\n## Ventajas\n\n- **Estabilidad**: API oficial y soportada\n- **Flexibilidad**: Componentes React personalizados\n- **Mantenibilidad**: Menor acoplamiento que V3\n\n## Zonas Disponibles\n\n- `listView > actions`\n- `editView > informations`\n- `editView > right-links`\n\n¡Prueba los ejemplos incluidos en este proyecto!",
+    "excerpt": "Aprende a usar Injection Zone para crear customizaciones estables y mantenibles en Strapi V4.",
+    "slug": "customizacion-injection-zone",
+    "author": "Desarrollador Frontend",
+    "status": "published",
+    "views": 89,
+    "meta_description": "Tutorial completo sobre Injection Zone en Strapi V4 para customización del admin panel.",
+    "tags": ["injection-zone", "customization", "strapi", "admin-panel"],
+    "publishedAt": "2024-01-20T14:30:00.000Z"
+  },
+  {
+    "title": "Mejores Prácticas de Desarrollo",
+    "content": "# Mejores Prácticas para Strapi V4\n\nEste artículo está en desarrollo y cubrirá las mejores prácticas para desarrollar con Strapi V4.\n\n## Temas a cubrir\n\n- Estructura de proyecto\n- Gestión de estado\n- Performance optimization\n- Testing strategies\n\n*Contenido próximamente...*",
+    "excerpt": "Artículo en desarrollo sobre mejores prácticas para el desarrollo con Strapi V4.",
+    "slug": "mejores-practicas-desarrollo",
+    "author": "Tech Lead",
+    "status": "draft",
+    "views": 0,
+    "meta_description": "Guía de mejores prácticas para desarrollo con Strapi V4 (en desarrollo).",
+    "tags": ["best-practices", "development", "strapi"],
+    "publishedAt": null
+  },
+  {
+    "title": "Migración desde V3 a V4",
+    "content": "# Guía de Migración V3 → V4\n\nEste post programado cubrirá el proceso completo de migración desde Strapi V3 a V4.\n\n## Puntos importantes\n\n- Cambios en la estructura de archivos\n- Nuevas APIs y métodos\n- Deprecaciones y breaking changes\n- Estrategias de migración\n\n*Publicación programada para la próxima semana.*",
+    "excerpt": "Guía completa para migrar proyectos de Strapi V3 a V4 con todos los cambios importantes.",
+    "slug": "migracion-v3-v4",
+    "author": "Migration Specialist",
+    "status": "draft",
+    "views": 5,
+    "meta_description": "Guía paso a paso para migrar de Strapi V3 a V4 con ejemplos prácticos.",
+    "tags": ["migration", "v3", "v4", "upgrade"],
+    "publishedAt": "2024-02-01T09:00:00.000Z"
+  }
+]

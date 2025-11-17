@@ -362,6 +362,57 @@ export interface AdminUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiPostsPost extends Schema.CollectionType {
+  collectionName: 'posts';
+  info: {
+    description: 'Entidad de ejemplo para demostrar customizaciones de Injection Zone';
+    displayName: 'Post';
+    pluralName: 'posts';
+    singularName: 'post';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    author: Attribute.String & Attribute.DefaultTo<'Admin'>;
+    content: Attribute.RichText & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::posts.post',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    excerpt: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 500;
+      }>;
+    featured_image: Attribute.Media<'images'>;
+    meta_description: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 160;
+      }>;
+    publishedAt: Attribute.DateTime;
+    slug: Attribute.UID<'api::posts.post', 'title'> & Attribute.Required;
+    status: Attribute.Enumeration<['draft', 'published', 'archived']> &
+      Attribute.DefaultTo<'draft'>;
+    tags: Attribute.JSON;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::posts.post',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    views: Attribute.Integer & Attribute.DefaultTo<0>;
+  };
+}
+
 export interface PluginContentReleasesRelease extends Schema.CollectionType {
   collectionName: 'strapi_releases';
   info: {
@@ -798,6 +849,7 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::posts.post': ApiPostsPost;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

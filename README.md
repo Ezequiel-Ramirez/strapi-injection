@@ -277,6 +277,7 @@ Para funcionalidades complejas que no pueden resolverse con Injection Zone.
 #### 📚 Recursos para Desarrollo
 
 - **[Documentación Oficial](https://docs-v4.strapi.io/dev-docs/plugins/developing-plugins)**
+- **[Tutorial Blog oficial](https://strapi.io/blog/build-a-custom-strapi-plugin-with-medium-and-devto-apis-part1)**
 - **[Video Tutorial](https://www.youtube.com/watch?v=9YCkauGqnZw)**
 
 #### ✅ Ventajas

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { 
   Button, 
   Typography,
@@ -9,17 +9,31 @@ import {
 } from "@strapi/design-system";
 import { Download, User } from "@strapi/icons";
 import { useNotification } from '@strapi/helper-plugin';
+import { useLocation } from 'react-router-dom';
 
 const CustomActionButton = () => {
   const toggleNotification = useNotification();
+  const location = useLocation();
   const [showModal, setShowModal] = useState(false);
   const [showConfirmDialog, setShowConfirmDialog] = useState(false);
+  const [shouldShow, setShouldShow] = useState(false);
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
     mensaje: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    // Configurar en qué páginas mostrar el componente
+    const isPostsPage = /^\/content-manager\/collection-types\/api::posts\.post/.test(location.pathname);
+    
+    // Mostrar solo en páginas específicas
+    setShouldShow(isPostsPage);
+  }, [location.pathname]);
+
+  // Si no debe mostrarse, retornar null
+  if (!shouldShow) return null;
 
   const handleExport = async () => {
     try {

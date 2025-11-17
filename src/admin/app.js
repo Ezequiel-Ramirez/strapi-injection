@@ -47,44 +47,25 @@ export default {
     // ============================================
 
     // 1. Inyectar botones de acción personalizados en la vista de lista
-    app.injectContentManagerComponent("listView", "actions", {
-      name: "CustomActionButton",
-      Component: CustomActionButton,
-    });
-
-    // 2. Inyectar indicador de estado en la vista de edición
-    app.injectContentManagerComponent("editView", "informations", {
-      name: "ContentStatusIndicator", 
-      Component: ContentStatusIndicator,
-    });
-
-    // 3. Ejemplo de inyección en modal de eliminación
-    app.injectContentManagerComponent("editView", "right-links", {
-      name: "DeleteWarning",
-      Component: () => (
-        <div style={{ padding: '16px', backgroundColor: '#fff3cd', borderRadius: '4px' }}>
-          <strong>⚠️ Atención:</strong> Esta acción no se puede deshacer.
-        </div>
-      ),
-    });
-
-    // ============================================
-    // INJECTION ZONE - PLUGINS (Ejemplo)
-    // ============================================
-
-    // Ejemplo de inyección en otros plugins
-    // app.injectComponent("plugin", "name", "area", {
-    //   name: "CustomPluginComponent",
-    //   Component: MyCustomComponent,
+    // app.injectContentManagerComponent("listView", "actions", {
+    //   name: "CustomActionButton",
+    //   Component: CustomActionButton,
     // });
 
-    // ============================================
-    // CONFIGURACIONES ADICIONALES
-    // ============================================
+    // 2. Inyectar indicador de estado en la vista de edición
+    // app.injectContentManagerComponent("editView", "informations", {
+    //   name: "ContentStatusIndicator", 
+    //   Component: ContentStatusIndicator,
+    // });
 
-    // Registrar hooks personalizados si es necesario
-    // app.registerHook('Admin/CM/pages/ListView', () => {
-    //   console.log('ListView hook ejecutado');
+    // 3. Ejemplo de inyección en modal de eliminación
+    // app.injectContentManagerComponent("editView", "right-links", {
+    //   name: "DeleteWarning",
+    //   Component: () => (
+    //     <div style={{ padding: '16px', backgroundColor: '#fff3cd', borderRadius: '4px' }}>
+    //       <strong>⚠️ Atención:</strong> Esta acción no se puede deshacer.
+    //     </div>
+    //   ),
     // });
 
     console.log('✅ Customizaciones del admin panel cargadas correctamente');

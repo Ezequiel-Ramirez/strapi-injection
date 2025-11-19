@@ -6,6 +6,10 @@ import ContentStatusIndicator from "./extensions/components/ContentStatusIndicat
 
 export default {
   config: {
+    locales: [
+      'en',
+      'es',
+    ],
     // Configuraciones de traducción
     translations: {
       en: {
@@ -14,21 +18,33 @@ export default {
         "global.actions": "Custom Actions",
       },
       es: {
-        "app.components.HomePage.welcome.again": "¡Bienvenido de nuevo a tu CMS!",
+        "app.components.HomePage.welcome.again": "😁😁¡Bienvenido de nuevo a tu CMS!😒😒",
         "app.components.LeftMenu.navbrand.title": "Panel de Administración",
         "global.actions": "Acciones Personalizadas",
       }
     },
     
     // Configuración de tema personalizado
+    // En Strapi v4, debes especificar 'light' y/o 'dark' explícitamente
     theme: {
-      colors: {
-        primary100: '#f0f8ff',
-        primary200: '#e1f0ff',
-        primary500: '#0066cc',
-        primary600: '#0052a3',
-        primary700: '#004080',
-      }
+      light: {
+        colors: {
+          primary100: '#f0f8ff',
+          primary200: '#e1f0ff',
+          primary500: '#0066cc',
+          primary600: '#0052a3',
+          primary700: '#004080',
+        }
+      },
+      // dark: {
+      //   colors: {
+      //     primary100: '#f0f8ff',
+      //     primary200: '#e1f0ff',
+      //     primary500: '#0066cc',
+      //     primary600: '#0052a3',
+      //     primary700: '#004080',
+      //   }
+      // }
     },
     
     // Configuraciones adicionales
